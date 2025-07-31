@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>مقالة بالموسيقى</title>
+</head>
+<body>
+
+  <h1>مقالة عن شيء معين</h1>
+  <p>هنا تكتب المقالة بتاعتك... الكلام اللي عايز تعرضه للزائر.</p>
+
+  <!-- تشغيل الموسيقى -->
+  <audio id="myAudio" src="Horror background music _horrorstories _no copyright(MP3_160K).mp3" loop autoplay></audio>
+
+  <script>
+    const audio = document.getElementById("myAudio");
+    audio.play().catch(() => {
+      const btn = document.createElement("button");
+      btn.innerText = "اضغط لتشغيل الموسيقى 🎵";
+      btn.onclick = () => {
+        audio.play();
+        btn.remove();
+      };
+      document.body.appendChild(btn);
+    });
+  </script>
+
+</body>
+</html>
